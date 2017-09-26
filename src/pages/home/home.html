@@ -17,10 +17,9 @@
 	<tr>
 	<td></td>
 	<td>
-	    <button ion-button color="secondary" ng-mousedown="Botton_Press_Release('bN','D')" 
-																					 ng-mouseup="Botton_Press_Release('bN','U')"
-																					 ng-mouseout="Botton_Press_Release('bN','O')"
-																				 >MOTORE-N NG</button>
+	    <button ion-button color="secondary" (touchstart)="Botton_Press_Release('bN','D')" 
+																					(touchend)="Botton_Press_Release('bN','U')"
+																					 >MOTORE-N NG</button>
 
 	</td>
 	<td>
