@@ -1,14 +1,91 @@
+<html>
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Ricavata da Ionic Blank con l'aggiunta di bottoni con evento
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
   <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+	<br /><br /><br />
+	</p>
+	
+	<table>
+
+	<tr>
+	<td></td>
+	<td>
+	    <button ion-button color="secondary" (mousedown)="Botton_Press_Release('bN','D')" 
+											 									 (mouseup)="Botton_Press_Release('bN','U')"
+																				 (mouseout)="Botton_Press_Release('bN','O')"
+																				 >MOTORE-N</button>
+
+	</td>
+	<td></td>
+	</tr>
+	<tr>
+	<td>
+	    <button ion-button color="secondary" (mousedown)="Botton_Press_Release('bW','D')" 
+											 									 (mouseup)="Botton_Press_Release('bW','U')"
+																				 (mouseout)="Botton_Press_Release('bW','O')"
+																				 >MOTORE-W</button>
+	</td>
+	<td></td>
+	<td>
+    <button ion-button color="secondary" (mousedown)="Botton_Press_Release('bE','D')" 
+											 									 (mouseup)="Botton_Press_Release('bE','U')"
+																				 (mouseout)="Botton_Press_Release('bE','O')"
+																				 >MOTORE-E</button>	
+	</td>
+	</tr>
+	<tr>
+	<td></td>
+	<td>
+	    <button ion-button color="secondary" (mousedown)="Botton_Press_Release('bS','D')" 
+											 									 (mouseup)="Botton_Press_Release('bS','U')"
+																				 (mouseout)="Botton_Press_Release('bS','O')"
+																			   >MOTORE-S</button>
+  </td>
+	<td></td>
+	</tr>
+	
+	</table>
+
+  <p>
+	<br /><br /><br />
+	</p>
+	
+
+  <p>	
+    <button ion-button (click)="getPosition()">Posizione</button>
   </p>
+
+  <p>
+	<br /><br /><br />
+	</p>
+
+<!--	
+	 	<p>	
+    <button ion-button color="secondary" (mousedown)="GeneralEvt('bN','D')" 
+											 									 (mouseup)="GeneralEvt('bN','U')"
+																				 (mouseout)="GeneralEvt('bN','O')"
+																				 >MOTORE-N</button>
+    <button ion-button color="secondary" (mousedown)="GeneralEvt('bS','D')" 
+											 									 (mouseup)="GeneralEvt('bS','U')"
+																				 (mouseout)="GeneralEvt('bS','O')"
+																			   >MOTORE-S</button>
+    <button ion-button color="secondary" (mousedown)="GeneralEvt('bW','D')" 
+											 									 (mouseup)="GeneralEvt('bW','U')"
+																				 (mouseout)="GeneralEvt('bW','O')"
+																				 >MOTORE-W</button>
+    <button ion-button color="secondary" (mousedown)="GeneralEvt('bE','D')" 
+											 									 (mouseup)="GeneralEvt('bE','U')"
+																				 (mouseout)="GeneralEvt('bE','O')"
+																				 >MOTORE-E</button>
+-->
+																				 	
 </ion-content>
+
+</html>

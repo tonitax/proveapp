@@ -1,5 +1,8 @@
 {
   "name": "starGo_02",
   "app_id": "",
-  "type": "ionic-angular"
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
 }
