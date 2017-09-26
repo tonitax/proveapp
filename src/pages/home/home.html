@@ -17,6 +17,13 @@
 	<tr>
 	<td></td>
 	<td>
+	    <button ion-button color="secondary" ng-mousedown="Botton_Press_Release('bN','D')" 
+																					 ng-mouseup="Botton_Press_Release('bN','U')"
+																					 ng-mouseout="Botton_Press_Release('bN','O')"
+																				 >MOTORE-N NG</button>
+
+	</td>
+	<td>
 	    <button ion-button color="secondary" (mousedown)="Botton_Press_Release('bN','D')" 
 											 									 (mouseup)="Botton_Press_Release('bN','U')"
 																				 (mouseout)="Botton_Press_Release('bN','O')"
@@ -56,8 +63,14 @@
   <p>
 	<br /><br /><br />
 	</p>
-	
+	<p>{{myOutput}}</p>
 
+	<ion-card (press)="pressEvent($event)">
+    <ion-item>
+      Pressed: {{press}} times
+    </ion-item>
+	</ion-card>
+	
   <p>	
     <button ion-button (click)="getPosition()">Posizione</button>
   </p>

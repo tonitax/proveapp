@@ -9,6 +9,8 @@ import { Geolocation } from '@ionic-native/geolocation';
 export class HomePage {
   public countClick = 0;
   public bState = false;
+  public myOutput = '';
+  public press : number = 0;
 
   
   constructor(public navCtrl: NavController, public geolocation: Geolocation) {
@@ -21,7 +23,9 @@ export class HomePage {
       alert(position.coords.latitude + " " + position.coords.longitude);
     });
   } 
-
+  pressEvent(e) {
+    this.press++
+  }
 	
   Botton_Press_Release(idBotton,idEvt)
    {
@@ -31,16 +35,19 @@ export class HomePage {
 	        switch(idEvt)
 			{
 			case 'D':
+				this.myOutput = "Motor Nord = ON";
 			   console.log("Motor Nord = ON");
 			   this.bState = true;
 			   break; 
 			case 'U':
+				this.myOutput = "Motor Nord = OFF";
 			   console.log("Motor Nord = OFF");
 			   this.bState = false;
 			   break;
 			case 'O':
 			   if(this.bState==true)
 			     {
+				this.myOutput = "Motor Nord = LEAVE";
 			     console.log("Motor Nord = OFF");
 				 this.bState = true;
 				 }
