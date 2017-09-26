@@ -19,7 +19,10 @@
 	<td>
 	    <button ion-button color="secondary" (touchstart)="Botton_Press_Release('bN','D')" 
 																					(touchend)="Botton_Press_Release('bN','U')"
-																					 >MOTORE-N NG</button>
+																					(mousedown)="Botton_Press_Release('bN','D')" 
+											 									 (mouseup)="Botton_Press_Release('bN','U')"
+																				 (mouseout)="Botton_Press_Release('bN','O')"
+																				 >MOTORE-N NG</button>
 
 	</td>
 	<td>
